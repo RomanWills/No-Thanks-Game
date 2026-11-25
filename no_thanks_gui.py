@@ -79,6 +79,7 @@ class NoThanksApp:
         self.deck = deck[9:]  # 9 cards removed unseen
 
         self.players = [GUIPlayer("You"), GeneticPlayer.from_file("Evolved Bot 1", "best_weights.json"), GeneticPlayer.from_file("Evolved Bot 2", "best_weights.json")]
+        random.shuffle(self.players)
         self.human = self.players[0]
         self.community = Community()
         self.current = 0
